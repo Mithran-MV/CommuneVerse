@@ -52,7 +52,11 @@ kynnovative_project/
    ```
 3. Configure the environment variables:
    - Create a `.env` file in the backend directory with the required keys. Refer to `.env.example` if available.
-   
+   - Ensure the `.env` file includes:
+     - `PORT`: Port number for the backend server (default: 5000).
+     - `OPENAI_API_KEY`: API key for OpenAI integrations.
+     - `DATABASE_URL`: Connection URL for the MySQL database.
+
 4. Start the backend server:
    ```bash
    node app.js
@@ -70,6 +74,8 @@ kynnovative_project/
    ```
 3. Configure the environment variables:
    - Create a `.env.local` file in the frontend directory with the required keys. Refer to `.env.local.example` if available.
+   - Ensure the `.env.local` file includes:
+     - `NEXT_PUBLIC_API_URL`: Backend API base URL (e.g., `http://localhost:5000`).
 
 4. Start the development server:
    ```bash
@@ -88,7 +94,7 @@ kynnovative_project/
 Ensure the `.env` file includes:
 - `PORT`: Port number for the backend server (default: 5000).
 - `OPENAI_API_KEY`: API key for OpenAI integrations.
-- `DATABASE_URL`: URL for the database (if applicable).
+- `DATABASE_URL`: URL for the MySQL database.
 
 ### Frontend
 Ensure the `.env.local` file includes:
@@ -101,4 +107,37 @@ Ensure the `.env.local` file includes:
 - **Issue**: Environment variables not recognized.
   - **Solution**: Verify the `.env` and `.env.local` files are correctly formatted and saved.
 
+## Technologies Used
+
+### Frontend:
+- **Next.js**: React-based framework for building fast and dynamic user interfaces.
+- **React.js**: Component-based library for creating interactive and reusable UI components.
+- **CSS Modules**: Scoped and maintainable styling for application components.
+
+### Backend:
+- **Node.js**: Server-side runtime for scalable and efficient backend development.
+- **Express.js**: Minimal and flexible Node.js framework for building APIs.
+- **OpenAI API**: Provides advanced conversational AI capabilities to enhance chatbot functionality.
+
+### Database:
+- **MySQL**: Relational database management system for efficient and structured data storage and retrieval.
+
+### Environment Management:
+- **dotenv**: Securely manages environment variables for API keys and configurations.
+
+### API Integration:
+- **OpenAI**: For intelligent natural language processing and chatbot interactions.
+- **Geolocation APIs**: To enable location-based discovery of events and activities.
+
+### Version Control:
+- **Git**: For version control and collaborative development.
+- **GitHub**: Repository hosting for managing the project codebase.
+
+### Development Tools:
+- **npm**: Node Package Manager for dependency management.
+- **VS Code**: Primary code editor for development.
+
+### Deployment (Optional if applicable):
+- **Vercel**: For deploying the frontend application.
+- **Heroku/Render**: For hosting the backend services.
 
