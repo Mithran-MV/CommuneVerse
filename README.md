@@ -10,21 +10,20 @@
 
 The project is implemented using a modular architecture, comprising a powerful backend API and a dynamic frontend interface for seamless user experience.
 
+## Screen Shorts
 
-##ScreenShorts
-![image](https://github.com/user-attachments/assets/f2d8f573-6621-4aa4-b060-fa03423fecd0)      ![image](https://github.com/user-attachments/assets/b82c5519-6189-4584-b2cc-356c2b6fdecf)
-
-![image](https://github.com/user-attachments/assets/a62120e6-a7b8-4acb-8680-4e55e9e6bf7a)
-![image](https://github.com/user-attachments/assets/e362e439-ab49-45bc-8b5b-39b3694466a4)
-![image](https://github.com/user-attachments/assets/9ce0590a-81a2-4c2a-b0d2-4e85d022fda3)
-![image](https://github.com/user-attachments/assets/1e0b1a48-0263-4fa5-a9f0-5d422a6d7649)
-
-
-
-
-
-
-
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/f2d8f573-6621-4aa4-b060-fa03423fecd0" alt="Screenshot 1" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/b82c5519-6189-4584-b2cc-356c2b6fdecf" alt="Screenshot 2" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/a62120e6-a7b8-4acb-8680-4e55e9e6bf7a" alt="Screenshot 3" width="300"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/e362e439-ab49-45bc-8b5b-39b3694466a4" alt="Screenshot 4" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/9ce0590a-81a2-4c2a-b0d2-4e85d022fda3" alt="Screenshot 5" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/1e0b1a48-0263-4fa5-a9f0-5d422a6d7649" alt="Screenshot 6" width="300"/></td>
+  </tr>
+</table>
 
 ## Prerequisites
 
@@ -152,6 +151,3 @@ Ensure the `.env.local` file includes:
 ### Development Tools:
 - **npm**: Node Package Manager for dependency management.
 - **VS Code**: Primary code editor for development.
-
-
-
