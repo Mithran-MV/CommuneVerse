@@ -12,8 +12,8 @@ The project is implemented using a modular architecture, comprising a powerful b
 
 
 ##ScreenShorts
-![image](https://github.com/user-attachments/assets/f2d8f573-6621-4aa4-b060-fa03423fecd0)
-![image](https://github.com/user-attachments/assets/b82c5519-6189-4584-b2cc-356c2b6fdecf)
+![image](https://github.com/user-attachments/assets/f2d8f573-6621-4aa4-b060-fa03423fecd0)      ![image](https://github.com/user-attachments/assets/b82c5519-6189-4584-b2cc-356c2b6fdecf)
+
 ![image](https://github.com/user-attachments/assets/a62120e6-a7b8-4acb-8680-4e55e9e6bf7a)
 ![image](https://github.com/user-attachments/assets/e362e439-ab49-45bc-8b5b-39b3694466a4)
 ![image](https://github.com/user-attachments/assets/9ce0590a-81a2-4c2a-b0d2-4e85d022fda3)
