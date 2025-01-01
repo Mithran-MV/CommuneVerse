@@ -137,7 +137,5 @@ Ensure the `.env.local` file includes:
 - **npm**: Node Package Manager for dependency management.
 - **VS Code**: Primary code editor for development.
 
-### Deployment (Optional if applicable):
-- **Vercel**: For deploying the frontend application.
-- **Heroku/Render**: For hosting the backend services.
+
 
