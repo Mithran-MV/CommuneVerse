@@ -20,13 +20,13 @@ export default function InterestsPage() {
     return (
         <div className="bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 min-h-screen flex flex-col items-center justify-center text-white">
             {/* Logo */}
-            <div className="mb-8">
-                <img
-                    src="/comuneVerse.png"
-                    alt="CommuneVerse Logo"
-                    className="w-48 h-48 mx-auto drop-shadow-xl" // Increased logo size
-                />
-            </div>
+            <div className="flex-grow text-center">
+                    <img
+                        src="/comuneVerse.png"
+                        alt="CommuneVerse Logo"
+                        className="w-32 h-auto mx-auto drop-shadow-xl" // Updated logo size
+                    />
+                </div>
 
             {/* Interests Selector */}
             <div className="bg-white text-black p-8 rounded-lg shadow-lg w-full max-w-3xl">
