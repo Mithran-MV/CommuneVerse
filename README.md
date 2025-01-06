@@ -19,9 +19,13 @@ The project is implemented using a modular architecture, comprising a powerful b
     <td><img src="https://github.com/user-attachments/assets/a62120e6-a7b8-4acb-8680-4e55e9e6bf7a" alt="Screenshot 3" width="300"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/e362e439-ab49-45bc-8b5b-39b3694466a4" alt="Screenshot 4" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/1267fc72-a67a-49d7-b48a-debfc50b8c40" alt="Screenshot 4" width="300"/></td>
     <td><img src="https://github.com/user-attachments/assets/9ce0590a-81a2-4c2a-b0d2-4e85d022fda3" alt="Screenshot 5" width="300"/></td>
     <td><img src="https://github.com/user-attachments/assets/1e0b1a48-0263-4fa5-a9f0-5d422a6d7649" alt="Screenshot 6" width="300"/></td>
+
+
+
+
   </tr>
 </table>
 
