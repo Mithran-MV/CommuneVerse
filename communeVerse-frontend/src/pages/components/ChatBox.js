@@ -7,7 +7,6 @@ export default function ChatBox() {
     const [query, setQuery] = useState("");
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [showProfile, setShowProfile] = useState(false);
 
     const suggestions = [
         "Tell me about tech events in Chennai!",
@@ -19,8 +18,10 @@ export default function ChatBox() {
     useEffect(() => {
         const introMessage = {
             user: "bot",
-            message: "Hey there! 👋 Looking for something fun or interesting to do? Why not ask me about tech events, music gigs, or fitness workshops? 😊",
+            message:
+                "Hey there! 👋 Looking for something fun or interesting to do? Why not ask me about tech events, music gigs, or fitness workshops? 😊",
             events: [],
+            usePreferenceEvent: [],
         };
         setMessages([introMessage]);
     }, []);
@@ -42,7 +43,8 @@ export default function ChatBox() {
             const botMessage = {
                 user: "bot",
                 message: data.message,
-                events: Object.values(data.res_event || {}),
+                events: Object.values(data.events || {}),
+                usePreferenceEvent: data.usePreferenceEvent || [],
             };
 
             setMessages([...messages, { user: "user", message: userQuery }, botMessage]);
@@ -52,16 +54,18 @@ export default function ChatBox() {
             setMessages([
                 ...messages,
                 { user: "user", message: userQuery },
-                { user: "bot", message: "Oops! Something went wrong. Please try again later.", events: [] },
+                {
+                    user: "bot",
+                    message: "Oops! Something went wrong. Please try again later.",
+                    events: [],
+                    usePreferenceEvent: [],
+                },
             ]);
         }
     };
 
     return (
         <div className="relative bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 text-white" style={{ height: "fit-content" }}>
-    
-            {/* Header */}
-         
             {/* Chat Container */}
             <div className="max-w-4xl mx-auto mt-16 p-6 bg-white rounded-lg shadow-lg">
                 <div className="h-[600px] overflow-y-auto space-y-4">
@@ -82,6 +86,8 @@ export default function ChatBox() {
                                             {msg.message}
                                         </span>
                                     </p>
+
+                                    {/* Slider for Events */}
                                     {msg.events && msg.events.length > 0 && (
                                         <Slider
                                             dots={true}
@@ -96,41 +102,77 @@ export default function ChatBox() {
                                                     key={idx}
                                                     className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center space-y-4"
                                                 >
-                                                    {event.img_url && (
+                                                    {event.img_url ? (
                                                         <img
                                                             src={event.img_url}
                                                             alt={event.title}
                                                             className="w-full h-[250px] object-cover rounded-lg"
                                                         />
+                                                    ) : (
+                                                        <div className="w-full h-[250px] flex items-center justify-center bg-gray-300 text-gray-700 text-sm rounded-lg">
+                                                            No Image Available
+                                                        </div>
                                                     )}
                                                     <div className="text-center space-y-2">
-                                                        <h3 className="text-xl font-bold text-gray-800">
-                                                            {event.title}
-                                                        </h3>
-                                                        <p className="text-gray-600 text-sm">
-                                                            {event.description}
-                                                        </p>
+                                                        <h3 className="text-xl font-bold text-gray-800">{event.title}</h3>
+                                                        <p className="text-gray-600 text-sm">{event.description}</p>
                                                         <div className="text-gray-500 text-sm space-y-1">
                                                             <p>📅 {event.date}</p>
                                                             <p>📍 {event.location}</p>
                                                         </div>
                                                     </div>
-                                                    <div className="flex space-x-4">
-                                                        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm shadow-md hover:bg-blue-600 transition">
-                                                            View More
-                                                        </button>
-                                                        <button className="bg-green-500 text-white px-4 py-2 rounded-lg text-sm shadow-md hover:bg-green-600 transition">
-                                                            Bookmark
-                                                        </button>
-                                                    </div>
                                                 </div>
                                             ))}
                                         </Slider>
+                                    )}
+
+                                    {/* Label and Slider for Use Preference Events */}
+                                    {msg.usePreferenceEvent && msg.usePreferenceEvent.length > 0 && (
+                                        <div className="mt-8">
+                                            <p className="text-left text-lg font-semibold text-gray-800 mb-4">
+                                                You might also like:
+                                            </p>
+                                            <Slider
+                                                dots={true}
+                                                infinite={true}
+                                                speed={500}
+                                                slidesToShow={1}
+                                                slidesToScroll={1}
+                                            >
+                                                {msg.usePreferenceEvent.map((event, idx) => (
+                                                    <div
+                                                        key={idx}
+                                                        className="bg-gray-100 shadow-md rounded-lg p-4 flex flex-col items-center space-y-4"
+                                                    >
+                                                        {event.img_url ? (
+                                                            <img
+                                                                src={event.img_url}
+                                                                alt={event.title}
+                                                                className="w-full h-[250px] object-cover rounded-lg"
+                                                            />
+                                                        ) : (
+                                                            <div className="w-full h-[250px] flex items-center justify-center bg-gray-300 text-gray-700 text-sm rounded-lg">
+                                                                No Image Available
+                                                            </div>
+                                                        )}
+                                                        <div className="text-center space-y-2">
+                                                            <h3 className="text-xl font-bold text-gray-800">{event.title}</h3>
+                                                            <p className="text-gray-600 text-sm">{event.description}</p>
+                                                            <div className="text-gray-500 text-sm space-y-1">
+                                                                <p>📅 {event.date}</p>
+                                                                <p>📍 {event.location}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </Slider>
+                                        </div>
                                     )}
                                 </div>
                             )}
                         </div>
                     ))}
+
                     {loading && (
                         <p className="text-left">
                             <span className="inline-block bg-gray-300 rounded-lg px-4 py-2 animate-pulse">
@@ -157,13 +199,14 @@ export default function ChatBox() {
                 </div>
             </div>
 
+            {/* Input Box */}
             <div className="flex mt-4 max-w-4xl mx-auto">
                 <input
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Ask me something..."
-                    className="flex-grow border rounded-l-lg p-4 text-lg shadow-inner"
+                    className="flex-grow border rounded-l-lg p-4 text-lg shadow-inner text-black placeholder-gray-500"
                 />
                 <button
                     onClick={() => sendMessage()}
