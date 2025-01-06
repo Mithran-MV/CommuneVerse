@@ -17,15 +17,13 @@ export default function Chat() {
                 </button>
 
                 {/* Logo */}
-                {/* Logo */}
-                    <div className="flex-grow text-center">
-                        <img
-                            src="/comuneVerse.png"
-                            alt="CommuneVerse Logo"
-                            className="w-48 h-48 mx-auto drop-shadow-xl"
-                        />
-                    </div>
-
+                <div className="flex-grow text-center">
+                    <img
+                        src="/comuneVerse.png"
+                        alt="CommuneVerse Logo"
+                        className="w-32 h-auto mx-auto drop-shadow-xl" // Updated logo size
+                    />
+                </div>
 
                 {/* Profile Section */}
                 <div className="relative">
