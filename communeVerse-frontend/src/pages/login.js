@@ -8,7 +8,7 @@ export default function LoginPage() {
                 <img
                     src="/comuneVerse.png"
                     alt="CommuneVerse Logo"
-                    className="w-48 h-48 mx-auto drop-shadow-xl" // Increased logo size
+                    className="w-40 h-auto mx-auto drop-shadow-xl" // Updated logo size
                 />
             </div>
 
